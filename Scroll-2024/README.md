@@ -9,7 +9,7 @@ Key features:
 - **Reputation system:** Sellers, buyers, and arbitrators earn or lose reputation points based on their actions, ensuring a trustworthy marketplace.
 - **Reusability:** Future marketplaces can utilize TrustBazaar as a framework with extended functionalities through a factory contract.
 
-## Live Demo
+## Live Demo: click the links to view the video
 [![first TrustBazaar Demo](https://www.loom.com/share/78ebde7985a14ca9b243d5bd67718470?sid=82f04d8b-77d3-4869-b99b-8c4dc5b75a58)]
 
 [![second TrustBazaar Demo](https://www.loom.com/share/01cfce3495e34347b8f234bdf1e94d1e?sid=779b3d9b-179f-4b53-93c3-576159264eac)]
@@ -25,7 +25,7 @@ Key features:
 ## Project Start Date
 This project was initiated on **September 24, 2024** and developed as a fresh idea for the Scroll Hackathon.
 
-## Deployed and Verified Contracts on Scroll
+## Deployed and Verified Contracts on Scroll: click the addresses to view on explorer
 - **TrustBazaar Contract:** [0xE006Ef36BA678Ed201587E91200de47255c3d664](https://sepolia.scrollscan.com/address/0xE006Ef36BA678Ed201587E91200de47255c3d664#code)
 - **OGToken Contract:** [0xe47fCcABcC282fE9A621c88Ad9E8749a38f61C15](https://sepolia.scrollscan.com/address/0xe47fCcABcC282fE9A621c88Ad9E8749a38f61C15#code)
 
