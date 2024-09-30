@@ -136,3 +136,9 @@ The platform leverages Scroll's scalability, Ethereum compatibility, and efficie
 
 ### Usability
 TrustBazaar is designed for everyday users who seek secure, trustless transactions for buying and selling goods or services online. With a factory contract extension, anyone can deploy their own custom marketplace using the framework.
+
+![Alchemy](./images/alchemy.png)
+
+![Scaffold-Eth frontend](./images/scafoldeth.png)
+
+
