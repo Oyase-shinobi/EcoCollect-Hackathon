@@ -17,11 +17,26 @@ const config: HardhatUserConfig = {
     }
   },
   networks: {
-    scrollTestnet: {
-      url: process.env.SCROLL_ALCHEMY_URL || "",
+    scrollSepolia: {
+      url: process.env.SCROLL_ALCHEMY_URL || 'https://sepolia-rpc.scroll.io',
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
+  },
+  etherscan: {
+    apiKey: {
+      scrollSepolia:  "SEIAVN8JJ3VWFCVBFV2DQDG1WDAM3CPDEW",
+    },
+    customChains: [
+      {
+        network: 'scrollSepolia',
+        chainId: 534351,
+        urls: {
+          apiURL: 'https://api-sepolia.scrollscan.com/api',
+          browserURL: 'https://sepolia.scrollscan.com/',
+        },
+      },
+    ],
   },
 };
 
