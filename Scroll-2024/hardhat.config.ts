@@ -18,7 +18,7 @@ const config: HardhatUserConfig = {
   },
   networks: {
     scrollTestnet: {
-      url: process.env.SCROLL_TESTNET_URL || "",
+      url: process.env.SCROLL_ALCHEMY_URL || "",
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
