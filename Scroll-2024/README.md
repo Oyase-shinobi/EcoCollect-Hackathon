@@ -10,7 +10,9 @@ Key features:
 - **Reusability:** Future marketplaces can utilize TrustBazaar as a framework with extended functionalities through a factory contract.
 
 ## Live Demo
-[![TrustBazaar Demo](https://img.youtube.com/vi/DEMO_LINK_HERE/0.jpg)](https://youtu.be/DEMO_LINK_HERE)
+[![first TrustBazaar Demo](https://www.loom.com/share/78ebde7985a14ca9b243d5bd67718470?sid=82f04d8b-77d3-4869-b99b-8c4dc5b75a58)]
+
+[![second TrustBazaar Demo](https://www.loom.com/share/01cfce3495e34347b8f234bdf1e94d1e?sid=779b3d9b-179f-4b53-93c3-576159264eac)]
 
 ## Tech Stack
 - Solidity (v0.8.26)
