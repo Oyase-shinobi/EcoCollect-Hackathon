@@ -24,8 +24,8 @@ Key features:
 This project was initiated on **September 24, 2024** and developed as a fresh idea for the Scroll Hackathon.
 
 ## Deployed and Verified Contracts on Scroll
-- **TrustBazaar Contract:** [0x1234...abcd](https://scroll-explorer-link-to-verified-contract)
-- **OGToken Contract:** [0x9876...efgh](https://scroll-explorer-link-to-verified-contract)
+- **TrustBazaar Contract:** [0xE006Ef36BA678Ed201587E91200de47255c3d664](https://sepolia.scrollscan.com/address/0xE006Ef36BA678Ed201587E91200de47255c3d664#code)
+- **OGToken Contract:** [0xe47fCcABcC282fE9A621c88Ad9E8749a38f61C15](https://sepolia.scrollscan.com/address/0xe47fCcABcC282fE9A621c88Ad9E8749a38f61C15#code)
 
 ## How It Works
 1. **Product Listing:** Sellers list products with a price in ERC20 tokens.
@@ -38,6 +38,7 @@ TrustBazaar integrates with the Scroll network via the Alchemy RPC URL, as confi
 
 ```typescript
 import * as dotenv from "dotenv";
+
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 
@@ -51,15 +52,30 @@ const config: HardhatUserConfig = {
         enabled: true,
         runs: 200,
       },
-      evmVersion: "london",
-    },
+      evmVersion: "london"
+    }
   },
   networks: {
-    scrollTestnet: {
-      url: process.env.SCROLL_ALCHEMY_URL || "",
+    scrollSepolia: {
+      url: process.env.SCROLL_ALCHEMY_URL || 'https://sepolia-rpc.scroll.io',
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
+  },
+  etherscan: {
+    apiKey: {
+      scrollSepolia:  "SEIAVN8JJ3VWFCVBFV2DQDG1WDAM3CPDEW",
+    },
+    customChains: [
+      {
+        network: 'scrollSepolia',
+        chainId: 534351,
+        urls: {
+          apiURL: 'https://api-sepolia.scrollscan.com/api',
+          browserURL: 'https://sepolia.scrollscan.com/',
+        },
+      },
+    ],
   },
 };
 
@@ -97,7 +113,7 @@ npx hardhat ignition deploy ./ignition/modules/deploy.ts --network scrollTestnet
 
 ### 5. Verify contracts
 ```bash
-npx hardhat verify --network scrollTestnet <contract_address>
+npx hardhat verify --network scrollSepolia <contract address> <space separated constructor parameters>
 ```
 
 ## Factory Contract Integration
