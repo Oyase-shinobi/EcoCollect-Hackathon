@@ -1,5 +1,6 @@
 node_modules
 .env
+ignition/deployments
 
 # Hardhat files
 /cache
