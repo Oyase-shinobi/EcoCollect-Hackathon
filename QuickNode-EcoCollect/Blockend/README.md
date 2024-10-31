@@ -35,7 +35,7 @@ To set up the EcoCollect project, follow these steps:
    Create a `.env` file in the root directory and add your wallet key and Blockscout API key:
    ```plaintext
    WALLET_KEY=<your-wallet-key>
-   QUICK_NODE_URL=<your-quick-node-url>
+   QUICKNODE_BASE_RPC_URL=<your-quick-node-url>
    BLOCKSCOUT_KEY=<your-blockscout-api-key>
    ```
 

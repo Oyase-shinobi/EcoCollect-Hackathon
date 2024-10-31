@@ -16,7 +16,7 @@ const config: HardhatUserConfig = {
     },
     // for testnet
     'base-sepolia': {
-      url: process.env.QUICK_NODE_URL,
+      url: process.env.QUICKNODE_BASE_RPC_URL,
       accounts: [process.env.WALLET_KEY as string],
       gasPrice: 1000000000,
     },

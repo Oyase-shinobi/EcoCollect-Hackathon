@@ -17,6 +17,7 @@ EcoCollect is primarily used by two key groups:
 By bridging decentralized technology with real-world environmental efforts, EcoCollect empowers users to contribute to a cleaner world while benefiting from the security and scalability of Base. Users can interact with the system through a user-friendly interface that provides dashboards for pickers and companies, enabling them to track deposits, payments, and transactions efficiently.
 
 ## Technologies Used
+- **QuickNode RPC**: Used to set up a Base Sepolia testnet node.
 - **Solidity**: Smart contracts were written in solidity.
 - **Hardhat**: Used to compile, deploy, and manage the smart contracts on the Base Sepolia testnet.
 - **React**: To build the interactive frontend interface.
@@ -41,7 +42,7 @@ By bridging decentralized technology with real-world environmental efforts, EcoC
    Create a `.env` file in the root directory and add your wallet key and Blockscout API key:
    ```plaintext
    WALLET_KEY=<your-wallet-key>
-   QUICK_NODE_URL=<your-quick-node-url>
+   QUICKNODE_BASE_RPC_URL = <your-quicknode-rpc-url>
    BLOCKSCOUT_KEY=<your-blockscout-api-key>
    ```
 
@@ -124,7 +125,3 @@ The frontend will be available at `http://localhost:5173`.
 
 5. **Company Dashboard**  
    ![Company Transaction Dashboard](./images/company_transaction.png)
-
-## contributors
-1. Abdulyekeen Lukman
-2. Olayiwola Saheed
