@@ -1,0 +1,78 @@
+name: Deploying to Vercel and Netlify
+on:
+  push:
+    branches:
+      - dev
+  pull_request:
+    branches:
+      - dev
+      
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: dev
+
+      # Install Node.js 16
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      # Install dependencies
+      - name: Install Dependencies
+        run: yarn install
+        continue-on-error: false
+
+      # Build the app
+      - name: Build
+        if: success() || failure() # Run even if tests fail
+        run: yarn run build
+        continue-on-error: false
+
+      # Merge to main branch
+      - name: Merge to dev
+        if: success() && github.event_name == 'push' && github.ref == 'refs/heads/dev' # Only merge on successful push to main branch
+        run: git merge origin/dev --no-edit
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN_GIT }}
+        continue-on-error: false
+        
+        
+        
+#       # Deploy to Vercel
+#       - name: Deploy to Vercel
+#         if: success() && github.ref == 'refs/heads/dev' # Only deploy on successful push to main branch
+#         uses: amondnet/vercel-action@v25
+#         with:
+#           vercel-token: ${{ secrets.VERCEL_TOKEN }}
+#           vercel-org-id: 
+#           vercel-project-id: 
+#         continue-on-error: false
+        
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v2.0
+        with:
+          publish-dir: './dist'
+          production-branch: dev
+          github-token: ${{ secrets.TOKEN_GIT }}
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: false
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 1
+
+
+
+
+        
+ 
