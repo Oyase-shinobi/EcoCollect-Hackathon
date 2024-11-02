@@ -118,10 +118,10 @@ The frontend will be available at `http://localhost:5173`.
    ![Admin Dashboard](./images/dash1.png)
 
 3. **Contact Us Page**  
-   ![Company Dashboard](./images/dash2.png)
+   ![Dashboard](./images/dash2.png)
 
 4. **Picker Dashboard**  
-   ![Picker Dashboard](./images/dash3.png)
+   ![Dashboard](./images/dash3.png)
 
 5. **Company Dashboard**  
-   ![Company Transaction Dashboard](./images/dash4.png)
+   ![Dashboard](./images/dash4.png)
