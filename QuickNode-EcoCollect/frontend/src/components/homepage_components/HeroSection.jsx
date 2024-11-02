@@ -19,18 +19,6 @@ const Hero = () => {
                 Turn Trash into Treasure: Recycle, Earn Rewards, and Save the
                 Planet
               </p>
-              <p className="text-sm md:text-[16px] leading-[25px] mt-5 font-semibold tracking-[-0.5px] lg:w-[420px] xl:w-[566px]">
-                Ecocollect is a groundbreaking digital currency specifically
-                designed to revolutionize the world of recycling. Built on the
-                principles of blockchain technology.
-              </p>
-              <p className="text-sm md:text-[16px] leading-[25px] mt-5 font-semibold tracking-[-0.5px] lg:w-[420px] xl:w-[566px]">
-                With Ecocollect, every time you recycle, you earn tokens that hold
-                real-world value. These tokens can be redeemed for a variety of
-                rewards, including discounts on eco-friendly products, access to
-                exclusive events, or even exchanged for other cryptocurrencies
-                or fiat currency.
-              </p>
               <MediumButton text={"Learn more"} linkto={"/about-us"} />
             </div>
 
