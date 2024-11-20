@@ -22,5 +22,5 @@ const AboutUsHero = () => {
     </div>
   );
 };
-
+     
 export default AboutUsHero;
